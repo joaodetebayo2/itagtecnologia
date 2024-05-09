@@ -1,5 +1,5 @@
 function obterDadosJSON() {
-    return fetch('http://localhost:9093/ItagRFIDMonitor/RetornaTag')
+    return fetch('http://192.168.1.69:9093/ItagRFIDMonitor/RetornaTag')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar os dados. Código de status: ' + response.status);
