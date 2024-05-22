@@ -1,4 +1,7 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  background-color: white;
+}
+.titulo {
+  font-size: 10px;
+  font-style: 2;
 }
