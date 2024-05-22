@@ -6,7 +6,7 @@ body {
   color: black;
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 10px 0 0 30px; /* Ajuste da margem */
+  margin: 10px 0 0 30px; 
 }
 
 .navegation-bar {
@@ -14,7 +14,6 @@ body {
   background-color: lightblue;
 }
 
-/* Estilos base para todos os botões */
 [class^="botao"] {
   color: white;
   text-decoration: none;
@@ -24,12 +23,10 @@ body {
   font-size: 25px;
 }
 
-/* Estilos de hover para todos os botões */
 [class^="botao"]:hover {
   background-color: #777;
 }
 
-/* Estilos específicos para cada botão, se necessário */
 .botao1 {
   margin-left: 130px;
 }
