@@ -3,8 +3,9 @@ body {
 }
 
 .text1 {
-  font-size: 23px;
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
   position: relative;
   top: 10px;
   left: 30px;
@@ -18,35 +19,38 @@ body {
 }
 
 .botao1 {
-    color: white; 
-    text-decoration: none; 
-    padding: 10px 16px; 
-    font-family: Oswald, Impact, Arial, sans-serif;
-    position: relative; 
-    background-color: transparent;
-    font-size: 25px;
-    top: -17px; 
-    left: 130px; 
+  color: white; 
+  text-decoration: none; 
+  padding: 10px 16px; 
+  font-family: Oswald, Impact, Arial, sans-serif;
+  position: relative; 
+  background-color: transparent;
+  font-size: 25px;
+  top: -17px; 
+  left: 130px; 
 }
 .botao2 {
-    color: white; 
-    text-decoration: none; 
-    padding: 10px 16px; 
-    font-family: Oswald, Impact, Arial, sans-serif;
-    background-color: transparent;
-    font-size: 25px;
-    position: relative; 
-    top: -17px; 
-    left: 125px; 
+  color: white; 
+  text-decoration: none; 
+  padding: 10px 16px; 
+  font-family: Oswald, Impact, Arial, sans-serif;
+  background-color: transparent;
+  font-size: 25px;
+  position: relative; 
+  top: -17px; 
+  left: 125px; 
 }
 .botao3 {
-   color: white; 
-    text-decoration: none; 
-    padding: 10px 16px; 
-    font-family: Oswald, Impact, Arial, sans-serif;
-    background-color: transparent;
-    font-size: 25px;
-    position: relative; 
-    top: -17px; 
-    left: 120px;
+ color: white; 
+  text-decoration: none; 
+  padding: 10px 16px; 
+  font-family: Oswald, Impact, Arial, sans-serif;
+  background-color: transparent;
+  font-size: 25px;
+  position: relative; 
+  top: -17px; 
+  left: 120px;
+}
+[class^="botao"]:hover {
+background-color: #777;
 }
