@@ -3,10 +3,12 @@ body {
 }
 
 .text1 {
+position: relative;
   color: black;
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 10px 0 0 30px; 
+  margin-top: -20px;
+  margin-left: 20px;
 }
 
 .navegation-bar {
@@ -21,20 +23,29 @@ body {
   font-family: Oswald, Impact, Arial, sans-serif;
   background-color: transparent;
   font-size: 25px;
-}
-
-[class^="botao"]:hover {
-  background-color: #777;
+  margin-left: 120px;
+  margin-top: -20px;
 }
 
 .botao1 {
-  margin-left: 130px;
+  position: absolute;
+  margin-left: 135px;
+  margin-top: -29px !important;
 }
 
 .botao2 {
-  margin-left: 125px;
+  position: absolute;
+  margin-left: 225px;
+  margin-top: -29px !important;
 }
 
 .botao3 {
-  margin-left: 120px;
+  position: absolute;
+  margin-left: 400px;
+  margin-top: -29px;
+}
+
+
+[class^="botao"]:hover {
+  background-color: #777;
 }
