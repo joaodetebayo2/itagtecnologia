@@ -5,7 +5,7 @@ function redirecionarParaMenu() {
 
 
 function redirecionarParaIMC() {
-    window.location.href = "/pages/imc.html"; 
+    window.location.href = "../pages/imc.html"; 
 }
 
 function redirecionarParaInfo() {
