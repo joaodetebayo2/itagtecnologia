@@ -1,13 +1,103 @@
-#calcularIMC {
-    background-color: pink; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    padding: 10px 20px; /* Preenchimento interno do botão */
-    border: none; /* Sem borda no botão */
-    border-radius: 5px; /* Borda arredondada do botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    cursor: pointer; /* Cursor ao passar por cima do botão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#calcularIMC:hover {
-    background-color: #ff1493; /* Cor de fundo ao passar o mouse */
+body {
+    background-color: white;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: lightblue;
+    padding: 0 20px;
+}
+
+.text1 {
+    color: black;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.botao1, .botao2, .botao3 {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    font-family: Oswald, Impact, Arial, sans-serif;
+    background-color: #444;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.botao1:hover, .botao2:hover, .botao3:hover {
+    background-color: #555;
+}
+
+.calculadora {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    width: 100%; /* Ocupar a largura total */
+    max-width: 400px; /* Largura máxima */
+    margin: auto; /* Centralizar horizontalmente */
+}
+
+.calculadora input {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.calculadora button {
+    background-color: #708090; 
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+@media screen and (max-width: 768px) {
+    .navigation-bar {
+        padding: 0 10px;
+    }
+
+    .text1 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap; 
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .botao1, .botao2, .botao3 {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
 }
