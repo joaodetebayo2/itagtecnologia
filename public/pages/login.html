@@ -13,8 +13,20 @@
             <a href="#" class="botao" id="homeBtn">HOME</a>
             <a href="#" class="botao" id="imcBtn">CALCULAR IMC</a>
             <a href="#" class="botao" id="loginBtn">LOGIN</a>
-            <script src="../joao.fit/redirecionamento/rediLogin.js"></script>
         </div>
     </div>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Cadastrar</button>
+        <div id="message"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="../joao.fit/js/auth.js"></script>
+    <script src="../joao.fit/js/autent.js"></script>
+    <script src="../joao.fit/redirecionamento/rediLogin.js"></script>
 </body>
 </html>
