@@ -7,23 +7,27 @@
     <title>João Site Teste</title>
 </head>
 <body>
-        <div class="navigation-bar">
-            <a class="text1">João.Fit</a>
+    <div class="navigation-bar">
+        <a class="text1">João.Fit</a>
         <div class="menu">
             <a href="#" class="botao1" id="homeBtn">HOME</a>
             <a href="#" class="botao2" id="infoBtn">INFORMAÇÕES</a>
             <a href="#" class="botao3" id="loginBtn">LOGIN</a>
         </div>
-            </div>
-        <script src="../joao.fit/redirecionamento/rediIMC.js"></script>
+    </div>
+    <script src="../joao.fit/redirecionamento/rediIMC.js"></script>
     <div class="calculadora">
         <h2>Calculadora de IMC</h2>
-        <input type="number" id="altura" placeholder="Altura em metros">
-        <input type="number" id="peso" placeholder="Peso em kg">
-        <button id="calcularIMC">Calcular IMC</button>
-        <div id="resultado"></div>
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" placeholder="Exemplo: 1.80">
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" placeholder="Exemplo: 80">
+        <div class="botoes-container">
+        <a href="#" class="botao" id="calcularIMC">Calcular IMC</a>
+        <a href="#" class="botao4" id="limparIMC">Limpar</a>
     </div>
-    
+        <div id="resultado"></div>
+    </div>    
+    <script src="../joao.fit/js/calcIMC.js"></script> <!-- Corrigido para src -->
 </body>
 </html>
-

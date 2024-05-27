@@ -14,13 +14,13 @@ body {
     align-items: center;
     height: 50px;
     background-color: lightblue;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .text1 {
     color: black;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald;
     line-height: 50px;
 }
 
@@ -33,7 +33,7 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 16px;
-    font-family: Oswald, Impact, Arial, sans-serif;
+    font-family: Oswald;
     background-color: #444;
     font-size: 18px;
     border-radius: 5px;
@@ -46,12 +46,14 @@ body {
 .calculadora {
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
     padding: 20px;
     width: 100%; /* Ocupar a largura total */
     max-width: 400px; /* Largura máxima */
     margin: auto; /* Centralizar horizontalmente */
+}
+.calculadora h2 {
+    text-align: center;
+    font-family: Oswald;
 }
 
 .calculadora input {
@@ -62,16 +64,54 @@ body {
     border: 1px solid #ccc; 
     border-radius: 5px; 
 }
+.calculadora label {
+    display: flex;
+    text-align: left;
+    color: black;
+    font-family: Oswald;
+}
+.calculadora .botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
 
-.calculadora button {
+.calculadora .botao {
     background-color: #708090; 
     color: white; 
-    padding: 10px 20px;
+    text-decoration: none;
     border: none; 
+    padding: 10px 50px;
     border-radius: 5px; 
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer; 
+    font-family: Oswald;
+    text-align: center;
 }
+.calculadora .botao4 {
+        background-color: red; 
+        color: white; 
+        text-decoration: none;
+        border: none; 
+        padding: 10px 50px;
+        border-radius: 5px; 
+        font-size: 12px;
+        cursor: pointer; 
+        font-family: Oswald;
+        text-align: center;
+    }
+#resultado.resultadoVisivel {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-family: Oswald;
+    color: white; 
+    background-color: gray; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
 
 @media screen and (max-width: 768px) {
     .navigation-bar {
