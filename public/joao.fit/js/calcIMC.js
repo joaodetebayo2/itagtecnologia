@@ -1,56 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM carregado');
+    const botaoLogin = document.getElementById('aBtn');
+    const resultadoDiv = document.getElementById('message');
 
-    const botaoCalcularIMC = document.getElementById('calcularIMC');
-    const limparIMC = document.getElementById('limparIMC');
-
-    if (botaoCalcularIMC) {
-        console.log('Botão encontrado:', botaoCalcularIMC);
-    } else {
-        console.error('Botão não encontrado');
-        return;
-    }
-
-    botaoCalcularIMC.addEventListener('click', function(event) {
+    botaoLogin.addEventListener('click', function(event) {
         event.preventDefault();
         console.log('Botão clicado');
 
-        const alturaInput = document.getElementById('altura');
-        const pesoInput = document.getElementById('peso');
-        const altura = parseFloat(alturaInput.value);
-        const peso = parseFloat(pesoInput.value);
-        const resultadoDiv = document.getElementById('resultado');
+        const url = 'https://api.joao.fit/login';
 
-        console.log(`Valores: altura=${altura}, peso=${peso}`);
+        let _data = {
+            email: document.getElementById('emailBtn').value,
+            password: document.getElementById('passwordBtn').value
+        };
 
-        if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
-            resultadoDiv.textContent = 'Por favor, insira valores válidos para altura e peso.';
-            console.log('Valores inválidos');
-            return;
-        }
+        console.log('Dados a serem enviados:', _data);
 
-        const imc = peso / (altura * altura);
-        console.log(`IMC calculado: ${imc}`);
+        // Mostrar mensagem de processamento
+        resultadoDiv.innerText = 'Processando...';
 
-        let classificacao;
-        if (imc < 18.5) {
-            classificacao = 'Abaixo do peso';
-        } else if (imc >= 18.5 && imc < 24.9) {
-            classificacao = 'Peso normal';
-        } else if (imc >= 25 && imc < 29.9) {
-            classificacao = 'Sobrepeso';
-        } else {
-            classificacao = 'Obesidade';
-        }
-limparIMC.addEventListener('click', function () {
-        alturaInput.value = '';
-        pesoInput.value = '';
-        resultadoDiv.textContent = '';
-        resultadoDiv.classList.remove('resultadoVisivel');
-    });
-        
-        resultadoDiv.textContent = `Seu IMC é ${imc.toFixed(2)} (Classificação: ${classificacao})`;
-        resultadoDiv.classList.add('resultadoVisivel');
-
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(_data),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            }
+        })
+        .then(response => {
+            console.log('Resposta recebida:', response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(json => {
+            console.log('Resposta JSON:', json);
+            if (json.message === 'Login autorizado') {
+                resultadoDiv.innerText = 'Login autorizado';
+                // Redirecionar após 5 segundos
+                setTimeout(() => {
+                    window.location.href = '../pages/menu.html'; // Redireciona para a página de sucesso
+                }, 5000);
+            } else {
+                resultadoDiv.innerText = 'Login falhou: ' + json.error;
+            }
+        })
+        .catch(err => {
+            console.error('Erro durante a solicitação:', err);
+            resultadoDiv.innerText = 'Erro durante a solicitação: ' + err.message;
+        });
     });
 });

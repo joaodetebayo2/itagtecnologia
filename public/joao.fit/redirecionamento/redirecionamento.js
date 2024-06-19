@@ -1,5 +1,5 @@
 function redirecionarParaMenu() {
-    window.location.href = "menu.html"; 
+    window.location.href = "pages/menu.html"; 
 }
 
 function redirecionarParaIMC() {
